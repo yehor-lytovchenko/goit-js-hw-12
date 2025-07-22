@@ -2,7 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
 export function createGallery(arr) {
-  return arr
+  const markup = arr
     .map(
       item =>
         `<li class="gallery-item">
@@ -30,11 +30,14 @@ export function createGallery(arr) {
     </li>`
     )
     .join('');
+
+  galleryEl.insertAdjacentHTML('beforeend', markup);
 }
 
 const gallery = new SimpleLightbox('.gallery a');
 const loaderEl = document.querySelector('.loader');
 const galleryEl = document.querySelector('.gallery');
+const loadMoreBtnEl = document.querySelector('.load-more-btn');
 
 export function createLightbox() {
   gallery.refresh();
@@ -50,4 +53,12 @@ export function showLoader() {
 
 export function clearMarkUp() {
   galleryEl.innerHTML = '';
+}
+
+export function showLoadMoreButton() {
+  loadMoreBtnEl.classList.remove('is-hidden-load-more');
+}
+
+export function hideLoadMoreButton() {
+  loadMoreBtnEl.classList.add('is-hidden-load-more');
 }

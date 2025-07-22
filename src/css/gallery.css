@@ -114,9 +114,7 @@
     }
 }
 
-.is-hidden {
-    display: none;
-}
+
 
 .gallery {
     padding: 24px 156px;
@@ -143,4 +141,34 @@
 .info-item {
     display: flex;
     flex-direction: column;
+}
+
+.load-more-btn {
+    border-radius: 8px;
+    border-color: transparent;
+    padding: 8px 16px;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 75px;
+    height: 40px;
+    background: #4e75ff;
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    color: #fff;
+}
+
+.load-more-btn:hover {
+    background: #6c8cff;
+}
+
+
+.is-hidden {
+    display: none;
+}
+
+.is-hidden-load-more {
+    display: none;
 }
